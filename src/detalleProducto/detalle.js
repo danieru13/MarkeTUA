@@ -14,6 +14,7 @@ function Detalle({ match }) {
             const item = await data.json();    
 
             console.log(item);
+            console.log(item.pictures[0].secure_url)
             setItem(item);
         }
 
