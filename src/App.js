@@ -1,6 +1,6 @@
 import React from 'react';
 import Busqueda from './listadoProductos/Busqueda'
-import Detalle from './detalleProducto/detalle'
+import Detalle from './detalleProducto/Detalle'
 
 import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
