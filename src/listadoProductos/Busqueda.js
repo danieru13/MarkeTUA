@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import ProductGrid from './products/ProductGrid';
 
+import '../App.css';
+
 function Listado() {  
 
   const initialProductState = [];
@@ -13,12 +15,12 @@ function Listado() {
   useEffect(() => {
 
     const fetchItems = async () => {
-      const data = await fetch(URL + search);
+      const data = await fetch("https://api.mercadolibre.com/sites/MCO/search?q=" + search);
       
       const items = await data.json();    
 
-      console.log(items);
-      setProducts(items);
+      console.log(items.results);
+      setProducts(items.results);
     }
 
     fetchItems();

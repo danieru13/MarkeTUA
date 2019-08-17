@@ -1,9 +1,9 @@
-import React from 'react';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import '../App.css';
 
 function Detalle({ match }) {
 
-    const URL = `URL=${match.params.id}`;
+    const URL = `https://api.mercadolibre.com/items/${match.params.id}`;
 
     const [item, setItem] = useState({images: ''});
 
@@ -22,8 +22,8 @@ function Detalle({ match }) {
 
   return (
     <div>
-      <h1>{item.name}</h1>
-      <img alt={item.name} src={item.thumbnail} />
+      <h1>{item.title}</h1>
+      <img alt={item.title} src={item.thumbnail} />
     </div>
   );
 }
